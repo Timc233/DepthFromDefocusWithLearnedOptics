@@ -12,6 +12,8 @@ from datasets.sceneflow import SceneFlow
 from snapshotdepth import SnapshotDepth
 from util.log_manager import LogManager
 
+import warnings
+
 seed_everything(123)
 
 
@@ -106,6 +108,11 @@ def main(args):
 
 
 if __name__ == '__main__':
+    os.environ["OPENCV_IO_ENABLE_OPENEXR"]="1"
+    warnings.filterwarnings("ignore", category=DeprecationWarning, module="kornia.augmentation.random_generator.random_generator")
+    warnings.filterwarnings("ignore", message="Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread.*", category=DeprecationWarning)
+    warnings.filterwarnings("ignore", category=DeprecationWarning, message=".*ANTIALIAS is deprecated and will be removed in Pillow 10.*")
+
     parser = ArgumentParser(add_help=False)
 
     parser.add_argument('--experiment_name', type=str, default='LearnedDepth')

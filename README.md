@@ -1,3 +1,12 @@
+# Project Desciption
+
+This is a proven working version of the original code repository. A env.yml is added to provide packages version information. A python adaptation of the color filling algorithm of the NYU Depth V2's toolbox is added to fill the sparse depth map of the DualPixel dataset. The path of datasets are updated accordingly. Use of deprecated functions are replaced with the new ones. 
+
+
+
+
+# Original README.md
+
 ## Project
 
 This is the code repository

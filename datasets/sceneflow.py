@@ -9,18 +9,18 @@ from kornia.augmentation import CenterCrop
 from kornia.filters import gaussian_blur2d
 
 # 'left' image has negative disparity.
-DATA_ROOT = os.path.join('data', 'training_data', 'SceneFlow')
+DATA_ROOT = os.path.join('data', 'training_data')
 TRAIN_IMAGE_PATH = [
     os.path.join(DATA_ROOT, 'FlyingThings3D_subset', 'train', 'image_clean', s) for s in ['right']
 ]
 TRAIN_DISPARITY_PATH = [
-    os.path.join(DATA_ROOT, 'FlyingThings3D_subset_disparity', 'train', 'disparity', s) for s in ['right']
+    os.path.join(DATA_ROOT, 'FlyingThings3D_subset', 'train', 'disparity', s) for s in ['right']
 ]
 VALIDATION_IMAGE_PATH = [
     os.path.join(DATA_ROOT, 'FlyingThings3D_subset', 'val', 'image_clean', s) for s in ['right']
 ]
 VALIDATION_DISPARITY_PATH = [
-    os.path.join(DATA_ROOT, 'FlyingThings3D_subset_disparity', 'val', 'disparity', s) for s in ['right']
+    os.path.join(DATA_ROOT, 'FlyingThings3D_subset', 'val', 'disparity', s) for s in ['right']
 ]
 EXAMPLE_IMAGE_PATH = [
     os.path.join(DATA_ROOT, 'example', 'FlyingThings3D', 'RGB_cleanpass', 'left')
